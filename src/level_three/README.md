@@ -1,2 +1,2 @@
 ## Level Three
-This section contains the deep learning asoects of the project
+This section contains the deep learning aspects of the project
