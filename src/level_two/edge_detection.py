@@ -22,9 +22,7 @@ def edge_detection(image):
 def crop_image(image):
     height, width = image.shape
     mask = np.zeros_like(image)
-    region = np.array([[
-        (0, height * 1 / 2),
-        (width, height * 1 / 2),
+    region = np.array([[(0, height * 1 / 2),(width, height * 1 / 2),
         (width, height),
         (0, height),
     ]], np.int32)
