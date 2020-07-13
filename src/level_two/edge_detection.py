@@ -1,13 +1,14 @@
-####################################################################
-#                  LINE DETECTION PROCESS                          #
-####################################################################
 
 #Import the Needed Libraries
 import numpy as np
 import logging
-import matplotlib.pyplot as plt
 import cv2
 logging.basicConfig(level = logging.INFO) 
+
+#########################################################################################
+#                               LINE DETECTION PROCESSS                                 #
+#########################################################################################
+
 
 # edge detection function
 def edge_detection(image):
@@ -108,7 +109,7 @@ def lane_detection(image):
     
     return lanes
 # Function to show lines
-def show_lines(image, lines, line_color=(0, 255, 0), line_width=4):
+def show_lines(image, lines, line_color=(0, 255, 0), line_width=8):
     line_image = np.zeros_like(image)
     if lines is not None:
         for line in lines:
@@ -117,8 +118,14 @@ def show_lines(image, lines, line_color=(0, 255, 0), line_width=4):
     line_image = cv2.addWeighted(image, 0.8, line_image, 1, 1)
     return line_image
 
-# main funtion for testing
+
+###################################################################
+#                          MAIN SCRIPT                            #
+###################################################################
+
+
 def main():
+    #Image Test
     image = cv2.imread('E:\CVFolower\Capture.PNG')
     lines = lane_detection(image)
     lane_image = show_lines(image,lines)
@@ -127,5 +134,4 @@ def main():
     cv2.destroyAllWindows()
 
 if __name__ == "__main__":
-    # execute only if run as a script
     main()
