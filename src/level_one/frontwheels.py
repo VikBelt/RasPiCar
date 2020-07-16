@@ -12,7 +12,7 @@ class Front:
         GPIO.setmode(GPIO.BCM)
         GPIO.setup(self.servoPIN, GPIO.OUT)
         self.p = GPIO.PWM(self.servoPIN, 50) # GPIO 13 for PWM with 50Hz
-        self.p.start(2.5) # Initialization
+        self.p.start(6) # Initialization
     
     #method to turn right
     def turnRight(self):
