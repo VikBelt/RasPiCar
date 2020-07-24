@@ -8,7 +8,7 @@ class Front:
         self.left = 4
         self.right = 8
         self.turning = False  
-        self.servoPIN = 13 #Hardware PWM on 13
+        self.servoPIN = 13 #Hardware PWM
         GPIO.setmode(GPIO.BCM)
         GPIO.setup(self.servoPIN, GPIO.OUT)
         self.p = GPIO.PWM(self.servoPIN, 50) # GPIO 13 for PWM with 50Hz
@@ -18,7 +18,7 @@ class Front:
     def turnRight(self):
         self.turning = True
         self.p.ChangeDutyCycle(self.right)
-        time.sleep(.50) #motor slight time delay for stability
+        time.sleep(.50)
     
     #method to straighten
     def straighten(self):
@@ -28,7 +28,7 @@ class Front:
     
     #method to turn left
     def turnLeft(self):
-        self.running = True
+        self.turning = True
         self.p.ChangeDutyCycle(self.left)
         time.sleep(.50)
     
@@ -36,5 +36,3 @@ class Front:
     def cleanup(self):
         self.turning = False
         self.p.stop()
-        GPIO.output(13, 0) #switch off gpio
-        GPIO.cleanup()
