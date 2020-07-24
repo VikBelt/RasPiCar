@@ -58,13 +58,11 @@ class Back:
         self.p.ChangeDutyCycle(25)
         self.q.ChangeDutyCycle(25)
 
-    
     #medium speed
     def medium(self):
         self.p.ChangeDutyCycle(50)
         self.q.ChangeDutyCycle(50)
   
-    
     #fast speed
     def fast(self):
         self.p.ChangeDutyCycle(75)
