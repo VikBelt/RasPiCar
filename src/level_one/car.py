@@ -1,4 +1,4 @@
-from backwheels import Back
+from backwhels import Back
 from frontwheels import Front
 
 class Car:
@@ -32,7 +32,12 @@ class Car:
         
     def fast(self):
         self.backWheels.fast()
-    
+        
+    def stop(self):
+        self.backWheels.stopCar()
+        
     def end(self):
+        print("Quitting")
         self.frontWheels.cleanup()
         self.backWheels.cleanup()
+        print("DONE")
