@@ -50,7 +50,7 @@ void GY521::readAccel(){
 //get temperature from sensor in celsius
 double GY521::tempCelsius(){
   tx  = Tmp + tempCal;
-  celsius = tx/340 + 32; //value aquired from datasheet
+  celsius = tx/340 + 36.50; //value aquired from datasheet
   return celsius;
 }
 
