@@ -1,7 +1,7 @@
 /* 
  *  Header file for GY521 gyroscope and accelerometer
  *  By Vikram Belthur - 7.30.2020
- *  Source: https://electrosome.com/interfacing-mpu-6050-gy-521-arduino-uno/
+ *  Reference: https://electrosome.com/interfacing-mpu-6050-gy-521-arduino-uno/
 */
 
 #ifndef _GY521_H //include guard
