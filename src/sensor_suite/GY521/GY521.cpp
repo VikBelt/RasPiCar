@@ -1,7 +1,7 @@
 /* 
  *  Implementation file for the GY521
  *  Vikram Belthur - 7/30/2020
- *  Source: https://electrosome.com/interfacing-mpu-6050-gy-521-arduino-uno/
+ *  Reference: https://electrosome.com/interfacing-mpu-6050-gy-521-arduino-uno/
  *  Refer to Registers in the MPU6050 Data Sheet
 */
 
